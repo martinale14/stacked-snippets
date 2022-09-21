@@ -3,8 +3,15 @@
   "displayName": "Stacked Snippets",
   "author": "Martín Alejandro Escobar Espinel",
   "description": "The extentions for make easier your development workflow with stacked arquitecture",
-  "version": "0.0.3",
-  "repository": {},
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinale14/stacked-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/martinale14/stacked-snippets/issues",
+    "email": "martinale4@hotmail.com"
+  },
   "icon": "assets/logo.png",
   "publisher": "martinale14",
   "engines": {
@@ -20,5 +27,16 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
-  }
+  },
+  "keywords": [
+    "dart",
+    "snippet",
+    "flutter",
+    "widgets",
+    "arquitechture",
+    "stacked",
+    "stacked_hooks",
+    "stacked arquitechture",
+    "stacked snippets"
+  ]
 }
