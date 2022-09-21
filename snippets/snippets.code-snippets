@@ -1,0 +1,59 @@
+{
+  "Sized box with height": {
+    "scope": "dart",
+    "prefix": "sbh",
+    "body": ["const SizedBox(height: ${1:height}),"],
+    "description": "Creates a Sized Box with the given height"
+  },
+  "Sized box with width": {
+    "scope": "dart",
+    "prefix": "sbw",
+    "body": ["const SizedBox(width: ${1:width}),"],
+    "description": "Creates a Sized Box with the given width"
+  },
+  "Hook ViewModel Widget": {
+    "scope": "dart",
+    "prefix": "hookW",
+    "body": [
+      "class ${1:WidgetName} extends HookViewModelWidget<${2:ViewModel}> {",
+      "  const ${1:WidgetName}({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget buildViewModelWidget(",
+      "          BuildContext context, ${2:ViewModel} viewModel) =>",
+      "      const SizedBox.shrink();",
+      "}"
+    ],
+    "description": "Creates a Hook Widget with a ViewModel"
+  },
+  "Stacked Hooks Service": {
+    "scope": "dart",
+    "prefix": "sService",
+    "body": [
+      "@lazySingleton",
+      "class ${1:ServiceName} extends BaseReactiveService {",
+      "",
+      "  //TODO: Implement Service Constructor",
+      "  @factoryMethod",
+      "  ${1:ServiceName}();",
+
+      "}"
+    ],
+    "description": "Creates a Stacked Hooks Service"
+  },
+  "Chopper DataSource": {
+    "scope": "dart",
+    "prefix": "cDataS",
+    "body": [
+      "part '$TM_FILENAME_BASE.chopper.dart';",
+      "",
+      "@ChopperApi()",
+      "abstract class ${1:DataSorceName} extends ChopperService {",
+      "",
+      "  static _$${1:DataSorceName} create([ChopperClient? client]) =>",
+      "      _$${1:DataSorceName}(client);",
+      "}"
+    ],
+    "description": "Creates a DataSource from Chopper Api"
+  }
+}

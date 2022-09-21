@@ -1,0 +1,23 @@
+{
+  "name": "stacked-snippets",
+  "displayName": "stacked_snippets",
+  "author": "Martín Alejandro Escobar Espinel",
+  "description": "The extentions for make easier your development workflow with stacked arquitecture",
+  "version": "0.0.1",
+  "repository": {},
+  "publisher": "martinale14",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
