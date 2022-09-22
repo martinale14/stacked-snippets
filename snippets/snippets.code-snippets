@@ -11,6 +11,28 @@
     "body": ["const SizedBox(width: ${1:width}),"],
     "description": "Creates a Sized Box with the given width"
   },
+  "ViewModel Builder reactive": {
+    "scope": "dart",
+    "prefix": "vmbr",
+    "body": [
+      "ViewModelBuilder<${1:ViewModelName}>.reactive(",
+      "      viewModelBuilder: () => ${1:ViewModelName}(),",
+      "      builder: (context, viewModel, child) => Container(),",
+      ");"
+    ],
+    "description": "Creates a reactive ViewModelBuilder"
+  },
+  "ViewModel Builder no reactive": {
+    "scope": "dart",
+    "prefix": "vmbn",
+    "body": [
+      "ViewModelBuilder<${1:ViewModelName}>.nonReactive(",
+      "      viewModelBuilder: () => ${1:ViewModelName}(),",
+      "      builder: (context, viewModel, child) => Container(),",
+      ");"
+    ],
+    "description": "Creates a non reactive ViewModelBuilder"
+  },
   "Hook ViewModel Widget": {
     "scope": "dart",
     "prefix": "hookW",
@@ -75,6 +97,6 @@
       "      _$${1:ModelName}ToJson(this);",
       "}"
     ],
-    "description": "Creates a DataSource from Chopper Api"
+    "description": "Creates a model with annotations from json annotations package"
   }
 }

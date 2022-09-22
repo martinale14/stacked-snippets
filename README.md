@@ -23,7 +23,9 @@ I'm working hard to select all the day to day widgets, so wait for more!.
 
 ### Flutter related snippets
 
-| Snippet | Description                            |
-| ------- | -------------------------------------- |
-| `sbh`   | Create a Sized Box with a given height |
-| `sbw`   | Create a Sized Box with a given width  |
+| Snippet | Description                             |
+| ------- | --------------------------------------- |
+| `sbh`   | Create a Sized Box with a given height  |
+| `sbw`   | Create a Sized Box with a given width   |
+| `vmbr`  | Creates a reactive ViewModelBuilder     |
+| `vmbn`  | Creates a non reactive ViewModelBuilder |
