@@ -14,12 +14,13 @@ I'm working hard to select all the day to day widgets, so wait for more!.
 
 ### Stacked Arquitecture related snippets
 
-| Snippet    | Description                                                                       |
-| ---------- | --------------------------------------------------------------------------------- |
-| `hookW`    | Creates a Hook ViewModel Widget from stacked_hooks package with a given viewModel |
-| `sService` | Creates a Service with lazySingleton annotation from injectable package           |
-| `cDataS`   | Creates a DataSource from the ChopperApi with a basic structure                   |
-| `jModel`   | Creates a model with annotations from json annotations package                    |
+| Snippet      | Description                                                                       |
+| ------------ | --------------------------------------------------------------------------------- |
+| `hookW`      | Creates a Hook ViewModel Widget from stacked_hooks package with a given viewModel |
+| `sService`   | Creates a Service with lazySingleton annotation from injectable package           |
+| `cDataS`     | Creates a DataSource from the ChopperApi with a basic structure                   |
+| `jModel`     | Creates a model with annotations from json annotations package                    |
+| `bViewModel` | Creates a ViewModel based on a existing base ViewModel                            |
 
 ### Flutter related snippets
 

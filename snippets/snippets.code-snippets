@@ -98,5 +98,22 @@
       "}"
     ],
     "description": "Creates a model with annotations from json annotations package"
+  },
+  "Base ViewModel": {
+    "scope": "dart",
+    "prefix": "bViewModel",
+    "body": [
+      "class ${1:ViewModelName} extends ${2:BaseViewModel}{",
+      "",
+      "  bool get loading => false;",
+      "",
+      "  @override",
+      "  List<ReactiveServiceMixin> get reactiveServices => []",
+      "",
+      "  ${1:ViewModelName}();",
+      "",
+      "}"
+    ],
+    "description": "Creates a ViewModel based on a existing base ViewModel"
   }
 }
