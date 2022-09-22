@@ -55,5 +55,26 @@
       "}"
     ],
     "description": "Creates a DataSource from Chopper Api"
+  },
+  "Json Annotations model": {
+    "scope": "dart",
+    "prefix": "jModel",
+    "body": [
+      "part '$TM_FILENAME_BASE.g.dart';",
+      "",
+      "@JsonSerializable(explicitToJson: true, includeIfNull: false)",
+      "class ${1:ModelName} {",
+      "",
+      "  ${1:ModelName}({});",
+      "",
+      "  factory ${1:ModelName}.fromJson(",
+      "          Map<String, dynamic> json) =>",
+      "      _$${1:ModelName}FromJson(json);",
+      "",
+      "  Map<String, dynamic> toJson() =>",
+      "      _$${1:ModelName}ToJson(this);",
+      "}"
+    ],
+    "description": "Creates a DataSource from Chopper Api"
   }
 }
