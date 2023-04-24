@@ -2,13 +2,17 @@
   "Sized box with height": {
     "scope": "dart",
     "prefix": "sbh",
-    "body": ["const SizedBox(height: ${1:height}),"],
+    "body": [
+      "const SizedBox(height: ${1:height}),"
+    ],
     "description": "Creates a Sized Box with the given height"
   },
   "Sized box with width": {
     "scope": "dart",
     "prefix": "sbw",
-    "body": ["const SizedBox(width: ${1:width}),"],
+    "body": [
+      "const SizedBox(width: ${1:width}),"
+    ],
     "description": "Creates a Sized Box with the given width"
   },
   "ViewModel Builder reactive": {
@@ -33,11 +37,14 @@
     ],
     "description": "Creates a non reactive ViewModelBuilder"
   },
-  "Hook ViewModel Widget": {
+  "ViewModel Widget": {
     "scope": "dart",
-    "prefix": "hookW",
+    "prefix": "vmw",
     "body": [
-      "class ${1:WidgetName} extends HookViewModelWidget<${2:ViewModel}> {",
+      "import 'package:stacked/stacked.dart';",
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:WidgetName} extends ViewModelWidget<${2:ViewModel}> {",
       "  const ${1:WidgetName}({Key? key}) : super(key: key);",
       "",
       "  @override",
@@ -48,17 +55,18 @@
     ],
     "description": "Creates a Hook Widget with a ViewModel"
   },
-  "Stacked Hooks Service": {
+  "Stacked Service": {
     "scope": "dart",
-    "prefix": "sService",
+    "prefix": "lService",
     "body": [
+      "import 'package:injectable/injectable.dart';",
+      "",
       "@lazySingleton",
-      "class ${1:ServiceName} extends BaseReactiveService {",
+      "class ${1:ServiceName} extends ${2:ServiceBaseClass} {",
       "",
       "  //TODO: Implement Service Constructor",
       "  @factoryMethod",
       "  ${1:ServiceName}();",
-
       "}"
     ],
     "description": "Creates a Stacked Hooks Service"
@@ -67,6 +75,8 @@
     "scope": "dart",
     "prefix": "cDataS",
     "body": [
+      "import 'package:chopper/chopper.dart';",
+      "",
       "part '$TM_FILENAME_BASE.chopper.dart';",
       "",
       "@ChopperApi()",
@@ -82,6 +92,8 @@
     "scope": "dart",
     "prefix": "jModel",
     "body": [
+      "import 'package:json_annotation/json_annotation.dart';",
+      "",
       "part '$TM_FILENAME_BASE.g.dart';",
       "",
       "@JsonSerializable(explicitToJson: true, includeIfNull: false)",
@@ -103,12 +115,14 @@
     "scope": "dart",
     "prefix": "bViewModel",
     "body": [
+      "import 'package:stacked/stacked.dart';",
+      "",
       "class ${1:ViewModelName} extends ${2:BaseViewModel}{",
       "",
       "  bool get loading => false;",
       "",
       "  @override",
-      "  List<ReactiveServiceMixin> get reactiveServices => []",
+      "  List<ListenableServiceMixin> get reactiveServices => [];",
       "",
       "  ${1:ViewModelName}();",
       "",
