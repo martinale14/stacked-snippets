@@ -48,7 +48,7 @@
       "  const ${1:WidgetName}({Key? key}) : super(key: key);",
       "",
       "  @override",
-      "  Widget buildViewModelWidget(",
+      "  Widget build(",
       "          BuildContext context, ${2:ViewModel} viewModel) =>",
       "      const SizedBox.shrink();",
       "}"
