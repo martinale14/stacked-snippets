@@ -99,7 +99,7 @@
       "@JsonSerializable(explicitToJson: true, includeIfNull: false)",
       "class ${1:ModelName} {",
       "",
-      "  ${1:ModelName}({});",
+      "  ${1:ModelName}();",
       "",
       "  factory ${1:ModelName}.fromJson(",
       "          Map<String, dynamic> json) =>",
@@ -129,5 +129,22 @@
       "}"
     ],
     "description": "Creates a ViewModel based on a existing base ViewModel"
+  },
+  "Base Repository": {
+    "scope": "dart",
+    "prefix": "iRepo",
+    "body": [
+      "import 'package:injectable/injectable.dart';",
+      "",
+      "@injectable",
+      "class ${1:RepositoryName} {",
+      "final ${2:DatasourceClass} _datasource",
+      "",
+      "",
+      "  ${1:RepositoryName}.from(this_datasource);",
+      "",
+      "}"
+    ],
+    "description": "Creates a repository with a given datasource"
   }
 }
