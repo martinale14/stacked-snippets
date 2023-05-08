@@ -16,12 +16,13 @@ I'm working hard to select all the day to day widgets, so wait for more!.
 
 | Snippet      | Description                                                                       |
 | ------------ | --------------------------------------------------------------------------------- |
-| `vmw`        | Creates a ViewModel Widget from stacked_hooks package with a given viewModel |
+| `vmw`        | Creates a ViewModel Widget from stacked_hooks package with a given viewModel      |
 | `lService`   | Creates a Service with lazySingleton annotation from injectable package           |
 | `cDataS`     | Creates a DataSource from the ChopperApi with a basic structure                   |
 | `jModel`     | Creates a model with annotations from json annotations package                    |
 | `bViewModel` | Creates a ViewModel based on a existing base ViewModel                            |
 | `iRepo`      | Creates a repository with a given datasource                                      |
+| `sView`      | Creates a stacked view from a ViewModel                                           |
 
 ### Flutter related snippets
 

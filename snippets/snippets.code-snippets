@@ -122,7 +122,7 @@
       "  bool get loading => false;",
       "",
       "  @override",
-      "  List<ListenableServiceMixin> get reactiveServices => [];",
+      "  List<ListenableServiceMixin> get listenableServices => [];",
       "",
       "  ${1:ViewModelName}();",
       "",
@@ -146,5 +146,23 @@
       "}"
     ],
     "description": "Creates a repository with a given datasource"
+  },
+  "Stacked View": {
+    "scope": "dart",
+    "prefix": "sView",
+    "body": [
+      "import 'package:stacked/stacked.dart'",
+      "",
+      "class ${1:ScreenName} extends StackedView<${2:ViewModelName}> {",
+      "",
+      " @override",
+      " Widget builder(BuildContext context, ${2:ViewModelName} viewModel, Widget? child) => UnimplementedError();",
+      "",
+      " @override",
+      " ${2:ViewModelName} viewModelBuilder(BuildContext context) => ${2:ViewModelName}();",
+      "",
+      "}"
+    ],
+    "description": "Creates a stacked view from a ViewModel"
   }
 }
