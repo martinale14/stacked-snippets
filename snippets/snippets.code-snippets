@@ -3,13 +3,29 @@
     "scope": "dart",
     "prefix": "sbh",
     "body": [
-      "const SizedBox(height: ${1:height}),"
+      "SizedBox(height: ${1:height}),"
     ],
     "description": "Creates a Sized Box with the given height"
   },
   "Sized box with width": {
     "scope": "dart",
     "prefix": "sbw",
+    "body": [
+      "SizedBox(width: ${1:width}),"
+    ],
+    "description": "Creates a Sized Box with the given width"
+  },
+  "Const sized box with height": {
+    "scope": "dart",
+    "prefix": "csbh",
+    "body": [
+      "const SizedBox(height: ${1:height}),"
+    ],
+    "description": "Creates a Sized Box with the given height"
+  },
+  "Const sized box with width": {
+    "scope": "dart",
+    "prefix": "csbw",
     "body": [
       "const SizedBox(width: ${1:width}),"
     ],
@@ -41,9 +57,6 @@
     "scope": "dart",
     "prefix": "vmw",
     "body": [
-      "import 'package:stacked/stacked.dart';",
-      "import 'package:flutter/material.dart';",
-      "",
       "class ${1:WidgetName} extends ViewModelWidget<${2:ViewModel}> {",
       "  const ${1:WidgetName}({Key? key}) : super(key: key);",
       "",
@@ -59,8 +72,6 @@
     "scope": "dart",
     "prefix": "lService",
     "body": [
-      "import 'package:injectable/injectable.dart';",
-      "",
       "@lazySingleton",
       "class ${1:ServiceName} extends ${2:ServiceBaseClass} {",
       "",
@@ -75,8 +86,6 @@
     "scope": "dart",
     "prefix": "cDataS",
     "body": [
-      "import 'package:chopper/chopper.dart';",
-      "",
       "part '$TM_FILENAME_BASE.chopper.dart';",
       "",
       "@ChopperApi()",
@@ -92,8 +101,6 @@
     "scope": "dart",
     "prefix": "jModel",
     "body": [
-      "import 'package:json_annotation/json_annotation.dart';",
-      "",
       "part '$TM_FILENAME_BASE.g.dart';",
       "",
       "@JsonSerializable(explicitToJson: true, includeIfNull: false)",
@@ -115,9 +122,7 @@
     "scope": "dart",
     "prefix": "bViewModel",
     "body": [
-      "import 'package:stacked/stacked.dart';",
-      "",
-      "class ${1:ViewModelName} extends ${2:BaseViewModel}{",
+      "class ${1:ViewModelName} extends ${2:AppBaseViewModel}{",
       "",
       "  bool get loading => false;",
       "",
@@ -134,8 +139,6 @@
     "scope": "dart",
     "prefix": "iRepo",
     "body": [
-      "import 'package:injectable/injectable.dart';",
-      "",
       "@injectable",
       "class ${1:RepositoryName} {",
       "final ${2:DatasourceClass} _datasource",
@@ -151,8 +154,6 @@
     "scope": "dart",
     "prefix": "sView",
     "body": [
-      "import 'package:flutter/material.dart';",
-      "import 'package:stacked/stacked.dart';",
       "",
       "class ${1:ScreenName} extends StackedView<${2:ViewModelName}> {",
       " const ${1:ScreenName}({super.key});",
@@ -168,5 +169,14 @@
       "}"
     ],
     "description": "Creates a stacked view from a ViewModel"
+  },
+  "import stacked": {
+    "scope": "dart",
+    "prefix": "impst",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:stacked/stacked.dart';"
+    ],
+    "description": "Generate stacked imports"
   }
 }
