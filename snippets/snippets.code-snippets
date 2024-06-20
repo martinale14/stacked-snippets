@@ -37,7 +37,7 @@
     "body": [
       "ViewModelBuilder<${1:ViewModelName}>.reactive(",
       "      viewModelBuilder: () => ${1:ViewModelName}(),",
-      "      builder: (context, viewModel, child) => Container(),",
+      "      builder: (context, viewModel, child) => SizedBox.shrink(),",
       ");"
     ],
     "description": "Creates a reactive ViewModelBuilder"
@@ -48,7 +48,7 @@
     "body": [
       "ViewModelBuilder<${1:ViewModelName}>.nonReactive(",
       "      viewModelBuilder: () => ${1:ViewModelName}(),",
-      "      builder: (context, viewModel, child) => Container(),",
+      "      builder: (context, viewModel, child) => SizedBox.shrink(),",
       ");"
     ],
     "description": "Creates a non reactive ViewModelBuilder"
@@ -58,7 +58,7 @@
     "prefix": "vmw",
     "body": [
       "class ${1:WidgetName} extends ViewModelWidget<${2:ViewModel}> {",
-      "  const ${1:WidgetName}({Key? key}) : super(key: key);",
+      "  const ${1:WidgetName}({super.key});",
       "",
       "  @override",
       "  Widget build(",
@@ -66,44 +66,42 @@
       "      const SizedBox.shrink();",
       "}"
     ],
-    "description": "Creates a Hook Widget with a ViewModel"
+    "description": "Creates a ViewModel Widget with a ViewModel"
   },
   "Stacked Service": {
     "scope": "dart",
-    "prefix": "lService",
+    "prefix": "lservice",
     "body": [
       "@lazySingleton",
       "class ${1:ServiceName} extends ${2:ServiceBaseClass} {",
-      "",
-      "  //TODO: Implement Service Constructor",
       "  @factoryMethod",
       "  ${1:ServiceName}();",
       "}"
     ],
-    "description": "Creates a Stacked Hooks Service"
+    "description": "Creates a Stacked Listenable Service"
   },
   "Chopper DataSource": {
     "scope": "dart",
-    "prefix": "cDataS",
+    "prefix": "cds",
     "body": [
       "part '$TM_FILENAME_BASE.chopper.dart';",
       "",
       "@ChopperApi()",
-      "abstract class ${1:DataSorceName} extends ChopperService {",
+      "abstract class ${1:DataSourceName} extends ChopperService {",
       "",
-      "  static _$${1:DataSorceName} create([ChopperClient? client]) =>",
-      "      _$${1:DataSorceName}(client);",
+      "  static _$${1:DataSourceName} create([ChopperClient? client]) =>",
+      "      _$${1:DataSourceName}(client);",
       "}"
     ],
     "description": "Creates a DataSource from Chopper Api"
   },
   "Json Annotations model": {
     "scope": "dart",
-    "prefix": "jModel",
+    "prefix": "jmodel",
     "body": [
       "part '$TM_FILENAME_BASE.g.dart';",
       "",
-      "@JsonSerializable(explicitToJson: true, includeIfNull: false)",
+      "@JsonSerializable()",
       "class ${1:ModelName} {",
       "",
       "  ${1:ModelName}();",
@@ -120,7 +118,7 @@
   },
   "Base ViewModel": {
     "scope": "dart",
-    "prefix": "bViewModel",
+    "prefix": "bvm",
     "body": [
       "class ${1:ViewModelName} extends ${2:AppBaseViewModel}{",
       "",
@@ -137,14 +135,12 @@
   },
   "Base Repository": {
     "scope": "dart",
-    "prefix": "iRepo",
+    "prefix": "brep",
     "body": [
       "@injectable",
-      "class ${1:RepositoryName} {",
-      "final ${2:DatasourceClass} _datasource",
+      "class ${1:RepositoryName} extends ${2:BaseRepository}<${3:DataSource}> {",
       "",
-      "",
-      "  ${1:RepositoryName}.from(this_datasource);",
+      "  ${1:RepositoryName}.from({super.datasource});",
       "",
       "}"
     ],
@@ -152,14 +148,13 @@
   },
   "Stacked View": {
     "scope": "dart",
-    "prefix": "sView",
+    "prefix": "sview",
     "body": [
-      "",
       "class ${1:ScreenName} extends StackedView<${2:ViewModelName}> {",
       " const ${1:ScreenName}({super.key});",
       "",
       " @override",
-      " Widget builder(;",
+      " Widget builder(",
       "         BuildContext context, ${2:ViewModelName} viewModel, Widget? child) =>",
       "     const SizedBox.shrink();",
       "",
@@ -174,9 +169,8 @@
     "scope": "dart",
     "prefix": "impst",
     "body": [
-      "import 'package:flutter/material.dart';",
       "import 'package:stacked/stacked.dart';"
     ],
-    "description": "Generate stacked imports"
+    "description": "Generate stacked import"
   }
 }
